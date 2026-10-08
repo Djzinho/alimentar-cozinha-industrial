@@ -149,3 +149,127 @@ footer a:hover { color: #fff; }
 @media (prefers-reduced-motion:reduce) {
   *,*:before,*:after { scroll-behavior: auto!important; transition: none!important; animation: none!important; }
 }
+
+
+/* CORTEX V9 — separação por materialidade, luz e planos; sem linhas entre seções */
+.hero {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+.restaurant {
+  position: relative;
+  z-index: 2;
+  background: #edf5ef;
+  padding: 73px 0 91px;
+}
+.restaurant-wrap {
+  width: min(calc(100% - 64px), 1148px);
+  padding: 46px clamp(40px,6vw,84px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 335px minmax(0,1fr);
+  align-items: center;
+  gap: clamp(42px,6.8vw,98px);
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 28px 68px rgba(8, 55, 26, .095), 0 5px 16px rgba(8, 55, 26, .035);
+}
+.restaurant-photo-wrap { width: 335px; }
+.restaurant-photo {
+  display: block;
+  width: 335px;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  border-radius: 2px;
+}
+.restaurant-copy { max-width: 460px; }
+.options {
+  width: min(calc(100% - 72px), 1100px);
+  padding-top: 87px;
+  padding-bottom: 103px;
+  background: #fff;
+}
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 42px;
+}
+.option {
+  max-width: none;
+  min-height: 274px;
+  padding: 32px 34px 31px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #f0f7f2;
+  box-shadow: 0 15px 43px rgba(3, 65, 27, .065), 0 2px 10px rgba(3, 65, 27, .025);
+  transition: transform .24s cubic-bezier(.2,.75,.2,1), box-shadow .24s ease;
+}
+.option:before, .option-marmitas:before { display: none; }
+.option-marmitas {
+  background: #fff;
+  box-shadow: 0 15px 43px rgba(3, 65, 27, .09), 0 2px 10px rgba(3, 65, 27, .03);
+}
+.option-tag { color: #446b51; font-size: 13px; }
+.option-marmitas .option-tag { color: #ba1420; }
+.option h3 { margin-top: 9px; }
+.option p { min-height: 0; font-size: 15px; }
+.option-action { margin-top: auto; padding-top: 20px; }
+@media(hover:hover) {
+  .option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 19px 47px rgba(3, 65, 27, .11), 0 5px 14px rgba(3, 65, 27, .025);
+  }
+}
+.location {
+  position: relative;
+  z-index: 1;
+  background: #034a27;
+  box-shadow: 0 -19px 55px rgba(3, 60, 26, .12);
+}
+.location-wrap { padding-top: 82px; padding-bottom: 90px; }
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .restaurant-wrap {
+    width: calc(100% - 48px);
+    grid-template-columns: 270px minmax(0,1fr);
+    gap: 34px;
+    padding: 37px;
+  }
+  .restaurant-photo-wrap, .restaurant-photo { width: 270px; }
+  .options-grid { gap: 22px; }
+  .option { padding: 29px 26px; }
+}
+@media (max-width: 700px) {
+  .restaurant { padding: 43px 0 56px; }
+  .restaurant-wrap {
+    width: min(calc(100% - 32px), 500px);
+    padding: 30px clamp(17px,5vw,28px) 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 4px;
+    box-shadow: 0 17px 42px rgba(8,55,26,.09), 0 4px 12px rgba(8,55,26,.03);
+  }
+  .restaurant-copy { order: 0; max-width: 100%; }
+  .restaurant-photo-wrap { order: 1; width: min(295px, 100%); align-self: center; }
+  .restaurant-photo { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; }
+  .options { padding-top: 72px; padding-bottom: 79px; }
+  .options-grid { display: flex; flex-direction: column; gap: 17px; margin-top: 34px; }
+  .option, .option-marmitas {
+    width: 100%;
+    min-height: 0;
+    padding: 27px 26px 25px;
+    border-radius: 4px;
+  }
+  .option-action { margin-top: 12px; padding-top: 8px; }
+  .location { box-shadow: 0 -12px 34px rgba(3,60,26,.09); }
+  .location-wrap { padding-top: 69px; padding-bottom: 75px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .option { transition: none; }
+}
