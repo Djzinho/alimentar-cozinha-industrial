@@ -9,3 +9,20 @@
 @media(max-width:350px){.hero-wrap,.restaurant-panel,.options,.reviews-inner{width:calc(100% - 34px)}.hero-film,.film-frame{width:273px}}
 @media(hover:hover){.option:hover{background-color:#e5f1e8}.option-marmitas:hover{background-color:#f3f8f4}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* V17 refinada â€” acabamento, sem redesign */
+:root{--cx-shadow-soft:0 5px 18px rgba(4,55,25,.045);--cx-shadow-panel:0 10px 30px rgba(4,55,25,.075);--cx-ease:cubic-bezier(.22,1,.36,1)}
+.hero{background:#fff}
+.restaurant{background:#eaf3ec}
+.restaurant-photo-wrap{box-shadow:12px 16px 30px rgba(3,61,28,.10),0 2px 8px rgba(3,61,28,.03);transition:box-shadow .35s ease}
+.option-buffet{background:#eaf3ec}
+.option-marmitas{box-shadow:inset 0 0 0 1px #dce9df,var(--cx-shadow-soft)}
+.review{box-shadow:var(--cx-shadow-soft)}
+.review-action{box-shadow:0 10px 28px rgba(0,25,10,.10)}
+.location-feature{box-shadow:var(--cx-shadow-panel)}
+.location-map-shell{box-shadow:var(--cx-shadow-soft)}
+.button,.review-action-button{transition:transform .23s var(--cx-ease),background-color .23s ease,box-shadow .23s ease}
+@media(hover:hover){.button:hover,.review-action-button:hover{transform:translateY(-2px)}.restaurant-photo-wrap:hover{box-shadow:14px 19px 34px rgba(3,61,28,.13),0 3px 10px rgba(3,61,28,.04)}}
+@media(max-width:700px){.restaurant-photo-wrap{box-shadow:7px 11px 23px rgba(3,61,28,.085)}.review-action{box-shadow:0 6px 19px rgba(0,25,10,.08)}}
+@media(prefers-reduced-motion:reduce){.restaurant-photo-wrap,.button,.review-action-button{transition:none!important}}
+
