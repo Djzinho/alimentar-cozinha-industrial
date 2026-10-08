@@ -337,3 +337,8 @@ body { overflow-x: clip; }
  [data-reveal] { opacity:1!important; transform:none!important; transition:none!important; }
 }
 
+
+/* V11: fachada e avaliaÃ§Ãµes reais */
+.reviews{background:#fff;padding:95px 0 105px}.reviews-inner{width:min(calc(100% - 72px),1100px);margin:auto;display:grid;grid-template-columns:42% 1fr;gap:85px;align-items:start}.reviews h2{font-size:clamp(35px,3.1vw,45px);margin:18px 0 17px}.reviews-inner>div:first-child>p{max-width:360px;font-size:15px;color:#59685c;line-height:1.8}.reviews-inner>div:first-child>a{display:inline-block;margin-top:25px;font-size:14px;font-weight:600;color:#006630}.reviews-quotes{display:grid;gap:21px}.reviews blockquote{margin:0;padding:28px 32px;background:#f3f8f4;border-radius:3px}.reviews blockquote:nth-child(2){background:#fff;box-shadow:0 11px 31px #03391b12}.reviews blockquote p{font:400 22px/1.48 Bitter,Georgia,serif;letter-spacing:-.02em}.reviews blockquote cite{display:block;margin-top:22px;font:600 13px/1.6 'DM Sans',Arial,sans-serif;color:#006630}.facade{width:min(calc(100% - 72px),1100px);margin:4px auto 27px}.facade img{width:100%;height:auto;display:block;object-fit:contain;max-height:none}.facade figcaption{font-size:12px;color:#d2e7d8;margin:10px 0 0}.location-map-shell{margin-top:20px}.location{padding-bottom:66px}
+@media(max-width:700px){.reviews{padding:63px 0 70px}.reviews-inner{width:calc(100% - 44px);display:block}.reviews h2{font-size:clamp(34px,9vw,45px)}.reviews-inner>div:first-child>a{margin-top:15px}.reviews-quotes{margin-top:32px;gap:14px}.reviews blockquote{padding:23px 23px}.reviews blockquote p{font-size:20px}.facade{width:calc(100% - 28px);margin-bottom:24px}.facade figcaption{padding-left:3px}.location{padding-bottom:38px}}
+
