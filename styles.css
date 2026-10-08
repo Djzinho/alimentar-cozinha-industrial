@@ -71,3 +71,9 @@ header{border-bottom:0}
 .footer-head a span{font-size:.45em;vertical-align:top}
 @media(max-width:700px){.hero-inner{gap:24px}.hero h1{font-size:clamp(42px,10vw,59px)}.hero-details{margin-top:28px}.intro,.steps{padding-top:56px;padding-bottom:60px}.intro h2,.service h2,.steps h2,.visit h2{font-size:clamp(36px,9.1vw,49px)}.step-row{display:block}.step-row>div,.step-row>div+div{border:0;padding:13px 0}.step-row>div+div{border-top:1px solid #d9e4dc}.steps-action{margin-top:22px}.service-copy{padding-top:48px;padding-bottom:50px}.video-shell{box-shadow:8px 8px 0 #e5eee7}}
 @media(prefers-reduced-motion:reduce){.btn,.header-cta,.btn span,.header-cta span,.textlink::after{transition:none!important}}
+
+/* V7 — cabecalho somente com a marca oficial */
+header.logo-only{height:88px;padding:0 5%;display:flex;align-items:center;justify-content:center;border:0;background:#fff}
+header.logo-only .brand{min-width:0;width:auto;display:inline-flex;align-items:center;justify-content:center;gap:0}
+header.logo-only .brand img{width:76px;height:76px;object-fit:contain}
+@media(max-width:700px){header.logo-only{height:76px}header.logo-only .brand img{width:65px;height:65px}}
