@@ -58,3 +58,21 @@
 @media(max-width:700px){.hero:after{height:70px}.restaurant{padding-top:34px}.restaurant-panel{box-shadow:0 4px 12px rgba(3,55,26,.035),0 15px 33px rgba(3,55,26,.09)}.film-frame{box-shadow:0 9px 25px rgba(5,50,24,.11)}.review-action{box-shadow:0 9px 22px rgba(0,21,11,.12)}.options-layout .option:nth-child(2)[data-reveal],.reviews-quotes .review:nth-child(2)[data-reveal]{transition-delay:0ms}}
 @media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1!important;transform:none!important;transition:none!important}.option,.button,.review-action-button,.floating-contact{transition:none!important}}
 
+
+/* V15 â€” mudanÃ§a real de arquitetura visual entre seÃ§Ãµes */
+.hero{background:#fff;overflow:visible}
+.hero:after{display:none}
+.hero-wrap{padding-bottom:106px}
+.restaurant{background:#e2efe6;padding:0 0 92px;box-shadow:none}
+.restaurant-panel{transform:translateY(-48px);margin-bottom:-48px;background:#fff;box-shadow:0 26px 70px rgba(2,46,22,.15),0 4px 12px rgba(2,46,22,.045);max-width:1180px;width:calc(100% - 96px);padding:50px 62px;gap:clamp(50px,7vw,100px)}
+.options{padding-top:76px;padding-bottom:96px}
+.options-layout{grid-template-columns:1.15fr .85fr;gap:28px}
+.option-buffet{background:#e9f4eb;box-shadow:none;border-radius:0;min-height:295px;padding:38px 40px}
+.option-marmitas{background:#fff;box-shadow:0 20px 50px rgba(1,53,22,.12);min-height:295px;padding:38px 40px}
+.reviews{position:relative;box-shadow:0 -15px 38px rgba(1,47,21,.085)}
+.location{background:#f0f6f1}
+.location-feature{box-shadow:0 28px 68px rgba(2,47,23,.13)}
+@media(max-width:1000px) and (min-width:701px){.restaurant-panel{width:calc(100% - 56px);padding:36px;gap:35px}.options-layout{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.hero-wrap{padding-bottom:91px}.restaurant{padding:0 0 58px}.restaurant-panel{width:calc(100% - 26px);transform:translateY(-33px);margin-bottom:-33px;padding:31px 20px 35px;box-shadow:0 20px 42px rgba(2,46,22,.15)}.options{padding-top:63px}.options-layout{grid-template-columns:1fr;gap:17px}.option-buffet,.option-marmitas{min-height:0;padding:28px 26px}.location-feature{box-shadow:0 17px 39px rgba(2,47,23,.12)}}
+@media(prefers-reduced-motion:reduce){.restaurant-panel{transition:none}}
+
