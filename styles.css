@@ -3,7 +3,7 @@
 .reviews { background:#06452a; padding:83px 0 42px; }
 .reviews-inner { grid-template-columns:.8fr 1.2fr; gap:55px; }
 .google-label {display:inline-flex;gap:11px;align-items:center;color:#fff;font-size:14px;font-weight:700;}
-.google-g {display:grid;place-items:center;width:33px;height:33px;background:#fff;color:#4285f4;border-radius:50%;font:800 23px/1 'DM Sans',sans-serif;}
+.google-logo {display:block;width:30px;height:31px;object-fit:contain;flex:0 0 30px}
 .reviews-intro h2 {margin-top:23px;}
 .reviews-quotes {grid-template-columns:1fr 1fr;gap:15px;}
 .review {background:#fff;color:#203a29;padding:24px 23px 22px;min-height:247px;display:flex;flex-direction:column;}
