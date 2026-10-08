@@ -193,3 +193,19 @@ body{padding-bottom:0}.site-header{height:68px}
 }
 
 @media(max-width:700px){.reviews-quotes{margin:18px 0 0;padding:2px 0 12px;width:100%;max-width:100%}}
+
+/* V22 mobile: media fill and review carousel */
+@media(max-width:700px){
+.hero-film,.film-frame{width:min(82vw,340px);max-width:100%}
+.hero-film{align-self:center}.film-frame{aspect-ratio:9/16}
+.restaurant-photo-wrap{width:min(88vw,360px);max-width:100%;align-self:center}
+.restaurant-photo{width:100%;height:auto;aspect-ratio:9/16;object-fit:contain}
+.location-inner{width:calc(100% - 22px)}.facade img{width:100%;height:auto}
+.reviews-quotes{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;max-width:100%;margin:18px 0 0;padding:0 0 9px}
+.reviews-quotes::-webkit-scrollbar{display:none}
+.review{flex:0 0 90%;min-width:0;scroll-snap-align:start}
+.review-carousel-controls{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:12px;color:#d4e7d9}
+.review-nav{display:flex;gap:8px}.review-nav button{width:40px;height:40px;background:transparent;color:white;border:1px solid #9bbba8;font-size:18px}
+.review-nav button:disabled{opacity:.4}
+}
+@media(min-width:701px){.reviews-quotes{display:flex;overflow-x:auto;gap:13px;scroll-snap-type:x mandatory;scrollbar-width:none}.review{flex:0 0 calc((100% - 13px)/2);min-width:0;scroll-snap-align:start}.review-carousel-controls{display:flex;justify-content:flex-end;gap:18px;margin-top:12px;color:#d4e7d9;align-items:center}.review-nav{display:flex;gap:7px}.review-nav button{width:38px;height:38px;background:transparent;border:1px solid #a3c3ae;color:white;font-size:17px}}
