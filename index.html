@@ -77,8 +77,8 @@
         </div>
         <p>Escolha o que combina com a sua rotina. No restaurante ou em uma marmita, é só decidir como prefere pedir.</p>
       </div>
-      <div class="options-layout">
-        <article class="option option-buffet">
+      <div class="meal-selector" role="tablist" aria-label="Escolha como vai almoçar"><button class="meal-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="buffet" data-meal="buffet">No restaurante</button><button class="meal-tab" type="button" role="tab" aria-selected="false" aria-controls="marmitas" data-meal="marmitas">Para levar</button></div><div class="options-layout">
+        <article class="option option-buffet is-selected" id="buffet">
           <span class="option-meta">Para sentar à mesa</span>
           <h3>Buffet</h3>
           <p>Venha no horário do almoço, escolha o que vai no prato e aproveite o restaurante.</p>
@@ -117,16 +117,12 @@
             <a class="button button-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.%20Paran%C3%A1%2C%2058%2C%20Centro%2C%20Uni%C3%A3o%20da%20Vit%C3%B3ria%2C%20PR%2C%2084600-300%2C%20Brasil" target="_blank" rel="noopener noreferrer">Traçar rota <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <div class="location-map-shell">
+        <details class="location-map-details"><summary class="location-map-summary">Ver mapa do restaurante <span aria-hidden="true">+</span></summary><div class="location-map-shell">
           <div class="map-heading">
             <span>Encontre no mapa</span>
             <a href="https://www.google.com/maps?cid=2271556058611671578" target="_blank" rel="noopener noreferrer">Abrir no Google Maps <span aria-hidden="true">↗</span></a>
           </div>
-          <iframe title="Mapa da Alimentar na Rua Paraná, 58, Centro, União da Vitória" src="https://www.google.com/maps?q=R.%20Paran%C3%A1%2C%2058%2C%20Centro%2C%20Uni%C3%A3o%20da%20Vit%C3%B3ria%2C%20PR%2C%2084600-300&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
+          <iframe title="Mapa da Alimentar na Rua Paraná, 58, Centro, União da Vitória" src="https://www.google.com/maps?q=R.%20Paran%C3%A1%2C%2058%2C%20Centro%2C%20Uni%C3%A3o%20da%20Vit%C3%B3ria%2C%20PR%2C%2084600-300&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></details></div></section></main>
 
   <footer class="site-footer">
     <div><strong>Alimentar</strong><span>Restaurante & Cozinha Industrial</span></div>
@@ -140,7 +136,6 @@
     <span class="floating-symbol" aria-hidden="true">↗</span>
     <span>Fazer pedido</span>
   </a>
-<nav class="mobile-actionbar" aria-label="Ações rápidas"><a class="mobile-actionbar-route" href="#visite" aria-label="Ver endereço e localização da Alimentar"><span aria-hidden="true">⌖</span> Como chegar</a><a class="mobile-actionbar-order" href="https://wa.me/5542988262162" target="_blank" rel="noopener noreferrer">Fazer pedido <span aria-hidden="true">↗</span></a></nav>
-  <script src="script.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>

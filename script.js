@@ -36,4 +36,5 @@
     }
     document.addEventListener('visibilitychange', update);
   }
-})();
+})();(() => {const tabs=[...document.querySelectorAll('.meal-tab')];const panels={buffet:document.getElementById('buffet'),marmitas:document.getElementById('marmitas')};function choose(name,focus=false){tabs.forEach(t=>{const active=t.dataset.meal===name;t.classList.toggle('is-active',active);t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;if(active&&focus)t.focus()});Object.entries(panels).forEach(([key,el])=>{if(el)el.classList.toggle('is-selected',key===name)})}tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>choose(tab.dataset.meal));tab.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();choose(tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length].dataset.meal,true)}})});if(location.hash==='#marmitas')choose('marmitas');window.addEventListener('hashchange',()=>{if(location.hash==='#marmitas')choose('marmitas')})})();
+(()=>{const detail=document.querySelector('.location-map-details');if(!detail)return;const media=matchMedia('(max-width:700px)');const apply=()=>{detail.open=!media.matches};apply();media.addEventListener?.('change',apply)})();

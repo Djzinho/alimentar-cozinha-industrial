@@ -138,3 +138,58 @@ body{padding-bottom:env(safe-area-inset-bottom,0px)}
 }
 @media(max-width:350px){.hero-wrap,.restaurant-panel,.options,.reviews-inner{width:calc(100% - 32px)}.mobile-actionbar{padding-inline:9px;gap:7px}.mobile-actionbar a{font-size:12px}}
 
+
+/* V20 â€” interaÃ§Ã£o e composiÃ§Ã£o mÃ³vel distintas do desktop */
+.meal-selector{display:none}.location-map-summary{display:none}
+@media(max-width:700px){
+body{padding-bottom:0}.site-header{height:68px}
+.hero{background:#fff}.hero-wrap{padding-top:23px;padding-bottom:35px;gap:23px}
+.hero-copy h1{font-size:clamp(35px,8.7vw,43px);line-height:1.12}
+.hero-description{font-size:14px}
+.hero-actions .subtle-link{display:none}
+.hero-actions .button{min-height:45px}
+.service-times{margin-top:14px}
+.hero-film{margin-inline:auto}.film-frame{width:273px}
+.restaurant{padding:35px 0 42px}
+.restaurant-panel{gap:17px}
+.restaurant-copy h2{font-size:clamp(32px,8vw,41px)}
+.restaurant-copy .button-outline{display:none}
+.restaurant-facts{margin-bottom:0}
+.restaurant-photo-wrap{max-width:248px}
+.options{padding:40px 0 55px}
+.options-head h2{font-size:clamp(34px,8.2vw,42px)}
+.options-head>p{font-size:13px}
+.meal-selector{display:grid;grid-template-columns:1fr 1fr;padding:4px;gap:4px;background:#e7f1e9;margin-top:20px}
+.meal-tab{min-height:44px;border:0;background:transparent;color:#234c32;font:700 13px "DM Sans",sans-serif;cursor:pointer}
+.meal-tab.is-active{background:#fff;color:#006630;box-shadow:0 2px 8px #0640221a}
+.options-layout{display:block;margin-top:12px}
+.option{padding:25px 24px;min-height:0}
+.option:not(.is-selected){display:none}
+.option h3{font-size:35px}
+.option p{font-size:14px}
+.option-action{min-height:46px}
+.reviews{padding:42px 0 40px}
+.reviews h2{font-size:clamp(31px,7.7vw,38px)}
+.reviews-quotes{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:2px 22px 12px;margin:18px -22px 0;scrollbar-width:thin;overscroll-behavior-x:contain}
+.review{flex:0 0 86%;scroll-snap-align:center;padding:23px;min-height:170px}
+.review blockquote{font-size:19px}
+.review-action{margin-top:9px;padding:19px}
+.review-action h3{font-size:22px}
+.review-action-button{min-height:47px}
+.location{padding:42px 0 53px}
+.location-heading h2{font-size:clamp(32px,8vw,41px)}
+.location-heading>p{display:none}
+.location-info{padding:19px 20px}
+.location-map-details{margin-top:13px;background:#fff}
+.location-map-summary{display:flex;align-items:center;justify-content:space-between;padding:17px 19px;color:#006630;cursor:pointer;font-weight:700;font-size:13px;list-style:none}
+.location-map-summary::-webkit-details-marker{display:none}
+.location-map-summary span{font-size:21px;line-height:1}
+.location-map-details[open] .location-map-summary span{transform:rotate(45deg)}
+.location-map-details .location-map-shell{margin:0;box-shadow:none;border:0;padding:0 9px 9px}
+.location-map-shell iframe{height:230px}
+.floating-contact{position:fixed;display:flex;bottom:calc(14px + env(safe-area-inset-bottom,0px));right:14px;left:auto;padding:12px 16px;box-shadow:0 8px 26px #003e2340}
+.mobile-actionbar{display:none!important}
+.site-footer{padding-bottom:88px}
+}
+
+@media(max-width:700px){.reviews-quotes{margin:18px 0 0;padding:2px 0 12px;width:100%;max-width:100%}}
