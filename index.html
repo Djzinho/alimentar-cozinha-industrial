@@ -2,9 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Buffet e marmitas na Alimentar, em Porto União. Saiba como funciona o almoço e entre em contato com o restaurante.">
+  <meta name="description" content="Conheça o buffet e as marmitas da Alimentar em Porto União. Veja o restaurante, avaliações de clientes e como chegar.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alimentar | Restaurante em Porto União">
+  <meta property="og:description" content="Buffet, marmitas e um lugar para o seu almoço em Porto União.">
+  <meta property="og:image" content="https://alimentar-cozinha-industrial.vercel.app/fachada.webp">
   <title>Alimentar — Restaurante & Cozinha Industrial</title>
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +19,7 @@
 <body>
   <header class="site-header">
     <a class="brand-home" href="#inicio" aria-label="Alimentar — voltar ao início">
-      <img src="logo.png" alt="Logotipo oficial Alimentar Restaurante e Cozinha Industrial" width="100" height="100">
+      <img src="logo.png" alt="Alimentar Restaurante e Cozinha Industrial" width="82" height="82">
     </a>
   </header>
 
@@ -23,97 +27,139 @@
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero-wrap">
         <div class="hero-copy">
-          <div class="context"><span class="context-mark"></span> Alimentar · Restaurante em Porto União</div>
+          <p class="eyebrow">Alimentar · Porto União / SC</p>
           <h1 id="hero-title">O almoço está servido. <em>Venha escolher o seu.</em></h1>
-          <p>Uma mesa para sentar, um buffet para escolher seu prato. E, para os dias corridos, marmitas que você pode consultar pelo WhatsApp.</p>
+          <p class="hero-description">Uma mesa para sentar, um buffet para escolher seu prato. E, para os dias corridos, marmitas que você pode consultar pelo WhatsApp.</p>
           <div class="hero-actions">
-            <a class="button button-green" href="#opcoes">Conhecer as opções <span aria-hidden="true">↗</span></a>
-            <a class="quiet-link" href="#restaurante">Ver o restaurante <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#opcoes">Conhecer as opções <span aria-hidden="true">↗</span></a>
+            <a class="subtle-link" href="#restaurante">Ver o restaurante <span aria-hidden="true">↗</span></a>
           </div>
           <div class="service-times">
-            <span class="service-times-label">Horário de almoço divulgado</span>
-            <span class="service-times-value">Segunda a sábado, 11h15 às 14h</span>
+            <span>Horário de almoço divulgado</span>
+            <strong>Segunda a sábado · 11h15 às 14h</strong>
           </div>
         </div>
-
         <figure class="hero-film">
           <div class="film-frame">
-            <video autoplay muted loop playsinline preload="metadata" aria-label="Vídeo do buffet real da Alimentar">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Vídeo real do buffet da Alimentar">
               <source src="buffet-v4.mp4" type="video/mp4">
             </video>
           </div>
-          <figcaption><span class="caption-rule"></span> O buffet da Alimentar</figcaption>
+          <figcaption>Buffet da Alimentar <span>Filmado no restaurante</span></figcaption>
         </figure>
       </div>
     </section>
 
     <section class="restaurant" id="restaurante" aria-labelledby="restaurant-title">
-      <div class="restaurant-wrap">
-        <div class="restaurant-photo-wrap">
-          <img class="restaurant-photo" src="ambiente.jpg" width="900" height="1600" loading="lazy" alt="Foto original do salão da Alimentar, mostrando mesas, cadeiras, entrada e balcão do buffet">
-          <span class="photo-caption">Nosso salão, em Porto União</span>
-        </div>
+      <div class="restaurant-panel">
+        <figure class="restaurant-photo-wrap">
+          <img class="restaurant-photo" src="ambiente.jpg" width="900" height="1600" loading="lazy" decoding="async" alt="Salão real da Alimentar, com mesas, cadeiras e balcão do buffet">
+          <figcaption>O salão, sem montagens ou imagens ilustrativas</figcaption>
+        </figure>
         <div class="restaurant-copy">
-          <span class="section-intro">O restaurante</span>
-          <h2 id="restaurant-title">Um lugar para chegar, escolher e almoçar.</h2>
-          <p>O salão da Alimentar tem mesas para quem prefere fazer uma pausa e almoçar no restaurante. A foto é daqui mesmo: este é o espaço que vai encontrar quando chegar.</p>
-          <div class="restaurant-meta">
+          <p class="eyebrow">O espaço</p>
+          <h2 id="restaurant-title">Seu lugar na hora do almoço.</h2>
+          <p>O salão tem mesas para quem prefere fazer uma pausa e almoçar no restaurante. Esta é a Alimentar por dentro, do jeito que você encontra quando chega.</p>
+          <div class="restaurant-facts" aria-label="Informações do restaurante">
             <span>Buffet presencial</span>
-            <span>Segunda a sábado</span>
+            <span>Porto União, SC</span>
           </div>
-          <a href="https://www.google.com/maps/dir/?api=1&destination=Alimentar%20Restaurante%20Porto%20Uni%C3%A3o%20SC" class="button button-outline" target="_blank" rel="noopener noreferrer">Como chegar <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#visite">Conhecer a localização <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
     <section class="options" id="opcoes" aria-labelledby="options-title">
-      <div class="options-header">
-        <span class="section-intro">Escolha como almoçar</span>
-        <h2 id="options-title">Aqui ou para levar?</h2>
-        <p>O almoço pode ser no restaurante ou para levar. Veja qual opção faz sentido para o seu dia.</p>
+      <div class="options-head">
+        <div>
+          <p class="eyebrow">Duas formas de almoçar</p>
+          <h2 id="options-title">Aqui ou para levar?</h2>
+        </div>
+        <p>Escolha o que combina com a sua rotina. No restaurante ou em uma marmita, é só decidir como prefere pedir.</p>
       </div>
-      <div class="options-grid">
+      <div class="options-layout">
         <article class="option option-buffet">
-          <span class="option-tag">No restaurante</span>
+          <span class="option-meta">Para sentar à mesa</span>
           <h3>Buffet</h3>
-          <p>Chegue no horário do almoço, escolha no buffet e sente-se à mesa. É simples assim.</p>
-          <a class="option-action" href="https://www.google.com/maps/dir/?api=1&destination=Alimentar%20Restaurante%20Porto%20Uni%C3%A3o%20SC" target="_blank" rel="noopener noreferrer">Ver localização <span aria-hidden="true">↗</span></a>
+          <p>Venha no horário do almoço, escolha o que vai no prato e aproveite o restaurante.</p>
+          <a href="#visite" class="option-action">Ver onde estamos <span aria-hidden="true">↗</span></a>
         </article>
         <article class="option option-marmitas" id="marmitas">
-          <span class="option-tag">Para pedir</span>
+          <span class="option-meta">Para os dias corridos</span>
           <h3>Marmitas</h3>
-          <p>Não vai conseguir parar para almoçar aqui? Pergunte pelo WhatsApp quais marmitas estão disponíveis hoje.</p>
-          <a class="option-action" href="https://wa.me/5542988262162?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20as%20marmitas%20de%20hoje." target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+          <p>Não vai conseguir parar por aqui? Fale com a equipe e consulte as opções disponíveis hoje.</p>
+          <a href="https://wa.me/5542988262162?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20as%20marmitas%20de%20hoje." class="option-action" target="_blank" rel="noopener noreferrer">Consultar marmitas <span aria-hidden="true">↗</span></a>
         </article>
       </div>
     </section>
 
-    <section class="reviews" id="avaliacoes"><div class="reviews-inner"><div><span class="section-intro">Avaliações de clientes</span><h2>Quem almoça aqui tem o que dizer.</h2><p>Comentários publicados nas avaliações da Alimentar e reproduzidos em sua página pública.</p><a href="https://alimentar.ueniweb.com/" target="_blank" rel="noopener noreferrer">Conferir a fonte ↗</a></div><div class="reviews-quotes"><blockquote><p>Comida ótima, acessível e ponto muito bem localizado!</p><cite>Renata Azevedo · julho de 2026</cite></blockquote><blockquote><p>excelente atendimento, comida de alta qualidade e limpeza extraordinária!</p><cite>Guilherme Henrique · março de 2026</cite></blockquote></div></div></section><section class="location" id="visite" aria-labelledby="visit-title">
-      <div class="location-wrap">
-        <div class="location-copy">
-          <span class="location-eyebrow">Alimentar · Porto União / SC</span>
-          <h2 id="visit-title">Encontre a Alimentar.</h2>
+    <section class="reviews" id="avaliacoes" aria-labelledby="reviews-title">
+      <div class="reviews-inner">
+        <div class="reviews-intro">
+          <p class="eyebrow eyebrow-light">O que dizem por aqui</p>
+          <h2 id="reviews-title">A opinião de quem já almoçou na Alimentar.</h2>
+          <p>Comentários atribuídos a clientes e publicados na página pública do restaurante.</p>
+          <a href="https://alimentar.ueniweb.com/" target="_blank" rel="noopener noreferrer" class="reviews-source">Ver fonte dos comentários <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="location-action">
-          <p>Estamos no bairro Santa Rosa, em Porto União. Veja a localização no mapa e abra a rota no celular.</p>
-          <address>Rua Expedicionário Eugênio Alves de Almeida<br>Porto União, SC</address><div class="location-buttons">
-            <a class="button button-white" href="https://www.google.com/maps/dir/?api=1&destination=Alimentar%20Restaurante%20Porto%20Uni%C3%A3o%20SC" target="_blank" rel="noopener noreferrer">Ver no mapa <span aria-hidden="true">↗</span></a>
-            <a class="button button-white-outline" href="https://wa.me/5542988262162" target="_blank" rel="noopener noreferrer">Fazer pedido <span aria-hidden="true">↗</span></a>
-          </div>
+        <div class="reviews-quotes">
+          <figure class="review">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <blockquote>Comida ótima, acessível e ponto muito bem localizado!</blockquote>
+            <figcaption>Renata Azevedo <span>Julho de 2026</span></figcaption>
+          </figure>
+          <figure class="review">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <blockquote>excelente atendimento, comida de alta qualidade e limpeza extraordinária!</blockquote>
+            <figcaption>Guilherme Henrique <span>Março de 2026</span></figcaption>
+          </figure>
         </div>
       </div>
-      <figure class="facade"><img src="fachada.webp" loading="lazy" decoding="async" width="1792" height="858" alt="Fachada real do Restaurante Alimentar em Porto União"><figcaption>A entrada da Alimentar</figcaption></figure><div class="location-map-shell"><div class="map-overline"><span>Localização do restaurante</span><a href="https://www.google.com/maps/dir/?api=1&destination=Alimentar%20Restaurante%20Porto%20Uni%C3%A3o%20SC" target="_blank" rel="noopener noreferrer">Abrir rotas ↗</a></div><iframe title="Mapa com localização da Alimentar em Porto União" src="https://www.google.com/maps?q=Alimentar%20Restaurante%20Porto%20Uni%C3%A3o%20SC&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    </section>
+
+    <section class="location" id="visite" aria-labelledby="location-title">
+      <div class="location-inner">
+        <div class="location-heading">
+          <div>
+            <p class="eyebrow">Venha conhecer</p>
+            <h2 id="location-title">É por aqui que você entra.</h2>
+          </div>
+          <p>Veja a fachada antes de sair de casa. Se preferir, abra o mapa para consultar o caminho até o restaurante.</p>
+        </div>
+        <div class="location-feature">
+          <figure class="facade">
+            <img src="fachada.webp" width="1792" height="858" loading="lazy" decoding="async" alt="Fachada real do Restaurante Alimentar, mostrando o letreiro verde e as portas de entrada">
+            <figcaption>Fachada da Alimentar, em Porto União</figcaption>
+          </figure>
+          <div class="location-info">
+            <p class="location-kicker">Alimentar Restaurante</p>
+            <h3>Porto União, SC</h3>
+            <address>Rua Expedicionário Eugênio Alves de Almeida<br>Porto União, Santa Catarina</address>
+            <p class="address-note">O número da rua está sendo confirmado. Use a rota pelo nome da empresa.</p>
+            <a class="button button-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Alimentar%20Restaurante%20Porto%20Uni%C3%A3o%20SC" target="_blank" rel="noopener noreferrer">Traçar rota <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="location-map-shell">
+          <div class="map-heading">
+            <span>Encontre no mapa</span>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Alimentar%20Restaurante%20Porto%20Uni%C3%A3o%20SC" target="_blank" rel="noopener noreferrer">Abrir no Google Maps <span aria-hidden="true">↗</span></a>
+          </div>
+          <iframe title="Mapa com busca da Alimentar em Porto União" src="https://www.google.com/maps?q=Alimentar%20Restaurante%20Porto%20Uni%C3%A3o%20SC&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <span>Alimentar — Restaurante & Cozinha Industrial</span>
-    <span>Porto União · Santa Catarina</span>
-    <a href="https://www.instagram.com/alimentarcozinhaindustrial/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
-    <span>Site por Córtex</span>
+  <footer class="site-footer">
+    <div><strong>Alimentar</strong><span>Restaurante & Cozinha Industrial</span></div>
+    <div class="footer-actions">
+      <a href="https://www.instagram.com/alimentarcozinhaindustrial/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      <a href="https://wa.me/5542988262162" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+    </div>
+    <small>Porto União · SC <span>Projeto digital / Córtex</span></small>
   </footer>
-  <a href="https://wa.me/5542988262162" class="floating-contact" target="_blank" rel="noopener noreferrer" aria-label="Entrar em contato pelo WhatsApp">
-    <span class="floating-symbol" aria-hidden="true">↗</span><span class="floating-text">Fazer pedido</span>
+  <a href="https://wa.me/5542988262162" class="floating-contact" target="_blank" rel="noopener noreferrer" aria-label="Entrar em contato com a Alimentar pelo WhatsApp">
+    <span class="floating-symbol" aria-hidden="true">↗</span>
+    <span>Fazer pedido</span>
   </a>
   <script src="script.js" defer></script>
 </body>
