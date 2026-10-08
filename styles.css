@@ -31,3 +31,30 @@
 .restaurant-panel{position:relative;box-shadow:0 22px 46px rgba(3,58,27,.105),0 4px 10px rgba(3,58,27,.025)}
 @media(max-width:700px){.hero:after{height:58px}.hero-wrap{padding-bottom:49px}.restaurant{padding:33px 0 63px}.restaurant-panel{box-shadow:0 16px 36px rgba(3,58,27,.10),0 3px 9px rgba(3,58,27,.03)}}
 
+
+/* V14 â€” sistema consistente de elevaÃ§Ã£o e transiÃ§Ãµes */
+:root{--shadow-panel:0 4px 12px rgba(3,55,26,.035),0 22px 52px rgba(3,55,26,.095);--shadow-light:0 3px 10px rgba(3,55,26,.03),0 15px 32px rgba(3,55,26,.065);--shadow-hover:0 7px 18px rgba(3,55,26,.05),0 26px 55px rgba(3,55,26,.12)}
+.hero{background:#fff;isolation:auto}
+.hero:after{z-index:0;height:115px;background:linear-gradient(180deg,rgba(237,245,239,0),rgba(237,245,239,.62) 72%,#edf5ef)}
+.hero-wrap{z-index:1}
+.restaurant{box-shadow:none;background:#edf5ef;padding-top:52px}
+.restaurant-panel{box-shadow:var(--shadow-panel);transition:box-shadow .45s ease}
+.options{position:relative;isolation:isolate}
+.option{transition:transform .3s var(--e),box-shadow .3s ease,background-color .3s ease}
+.option-buffet{box-shadow:var(--shadow-light)}
+.option-marmitas{box-shadow:var(--shadow-light)}
+.location{background:linear-gradient(180deg,#f2f8f3,#f7faf7 23%,#f5f8f4)}
+.location-feature{box-shadow:var(--shadow-panel)}
+.location-map-shell{box-shadow:var(--shadow-light)}
+.review{box-shadow:0 8px 21px rgba(0,23,10,.11)}
+.review-action{box-shadow:0 15px 34px rgba(0,21,11,.15)}
+.film-frame{box-shadow:0 14px 38px rgba(5,50,24,.13)}
+.button,.review-action-button,.floating-contact{transition:transform .24s var(--e),background-color .24s ease,box-shadow .24s ease}
+@media(hover:hover){.option:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}.button:hover,.review-action-button:hover{box-shadow:0 9px 22px rgba(3,62,27,.15)}}
+[data-reveal]{opacity:0;transform:translate3d(0,15px,0);transition:opacity .62s ease,transform .72s var(--e)}
+[data-reveal].in-view{opacity:1;transform:none}
+.options-layout .option:nth-child(2)[data-reveal]{transition-delay:85ms}
+.reviews-quotes .review:nth-child(2)[data-reveal]{transition-delay:85ms}
+@media(max-width:700px){.hero:after{height:70px}.restaurant{padding-top:34px}.restaurant-panel{box-shadow:0 4px 12px rgba(3,55,26,.035),0 15px 33px rgba(3,55,26,.09)}.film-frame{box-shadow:0 9px 25px rgba(5,50,24,.11)}.review-action{box-shadow:0 9px 22px rgba(0,21,11,.12)}.options-layout .option:nth-child(2)[data-reveal],.reviews-quotes .review:nth-child(2)[data-reveal]{transition-delay:0ms}}
+@media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1!important;transform:none!important;transition:none!important}.option,.button,.review-action-button,.floating-contact{transition:none!important}}
+
