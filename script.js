@@ -1,1 +1,1 @@
-document.getElementById('year').textContent=new Date().getFullYear();
+const els=document.querySelectorAll('.reveal');if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');obs.unobserve(e.target)}})},{threshold:.12});els.forEach(e=>obs.observe(e))}else{els.forEach(e=>e.classList.add('is-visible'))}document.addEventListener('visibilitychange',()=>{const v=document.querySelector('.hero-media video');if(v){document.hidden?v.pause():v.play().catch(()=>{})}});
