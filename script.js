@@ -1,1 +1,39 @@
-(()=>{const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;const targets=document.querySelectorAll('.hero-copy,.restaurant-copy,.options-head,.option,.reviews-intro,.review,.location-heading,.location-feature,.location-map-shell');if(!reduced&&'IntersectionObserver'in window){targets.forEach(el=>el.setAttribute('data-reveal',''));const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target)}})},{threshold:.08,rootMargin:'0px 0px 35px 0px'});targets.forEach(el=>io.observe(el))}const video=document.querySelector('.film-frame video');if(video){const io=new IntersectionObserver(es=>{const visible=es[0]?.isIntersecting&&!document.hidden;if(visible)video.play().catch(()=>{});else video.pause()},{threshold:.05});io.observe(video);document.addEventListener('visibilitychange',()=>{if(document.hidden)video.pause()})}})();
+(() => {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const elements = document.querySelectorAll('.restaurant-copy,.restaurant-photo-wrap,.options-head,.option,.reviews-intro,.review,.review-action,.location-heading,.location-feature,.location-map-shell');
+  if (!reduced && 'IntersectionObserver' in window && typeof Element.prototype.animate === 'function') {
+    const seen = new WeakSet();
+    const observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting || seen.has(entry.target)) continue;
+        const element = entry.target;
+        seen.add(element);
+        observer.unobserve(element);
+        const isMobile = window.innerWidth <= 700;
+        const offset = isMobile ? 6 : 12;
+        element.animate([{ transform: 'translateY('+offset+'px)' }, { transform: 'translateY(0)' }], {
+          duration: isMobile ? 360 : 550, easing: 'cubic-bezier(.22,1,.36,1)', iterations: 1
+        });
+      }
+    }, { threshold: .08, rootMargin: '0px 0px 36px 0px' });
+    elements.forEach(el => observer.observe(el));
+  }
+  const video = document.querySelector('.film-frame video');
+  if (video) {
+    let intersecting = false;
+    const update = () => {
+      if (document.hidden || !intersecting) video.pause();
+      else video.play().catch(() => {});
+    };
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {
+        intersecting = !!entries[0]?.isIntersecting;
+        update();
+      }, { threshold: .05 }).observe(video);
+    } else {
+      intersecting = true;
+      update();
+    }
+    document.addEventListener('visibilitychange', update);
+  }
+})();
