@@ -261,3 +261,7 @@ body{padding-bottom:0}.site-header{height:68px}
   .hero.scroll-hero-enabled .hero-copy h1,.hero.scroll-hero-enabled .hero-description,.hero.scroll-hero-enabled .hero-actions,.hero.scroll-hero-enabled .service-times{opacity:1!important;transform:none!important}
   body.mobile-hero-active .floating-contact{opacity:1;transform:none;pointer-events:auto}
 }
+
+/* V23.1 — controls without arrow glyphs */
+.review-nav button{width:auto;min-width:78px;min-height:39px;padding:8px 12px;font:600 12px/1.2 "DM Sans",sans-serif;letter-spacing:.01em}
+@media(max-width:700px){.review-nav button{width:auto;min-width:76px;min-height:42px;padding:8px 11px;font-size:12px}.button,.review-action-button{justify-content:center;text-align:center}.option-action{gap:0}.footer-actions a{text-decoration:none}}
